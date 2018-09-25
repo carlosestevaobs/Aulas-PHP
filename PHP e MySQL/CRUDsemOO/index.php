@@ -24,7 +24,7 @@ if (isset($_GET['id'])) {
     </head>
     <body>        
     <div id="cadastro">
-    <h1> Cadastro de Usuarios</h1>
+    <h1> Cadastro de Usuários</h1>
         <form method="POST" action="<?php echo $endereco;?>">
             <input type="hidden" name="id" value="<?php echo $id;?>">
             <input type="text" name="usuario" placeholder="usuário" value="<?php echo $nome;?>"> <br/> <br/>
