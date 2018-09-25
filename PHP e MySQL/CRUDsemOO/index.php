@@ -1,6 +1,8 @@
 <?php
 include "conexao.php";
 if (isset($_GET['id'])) {
+    $endereco = "editar.php";
+    $botao = "Editar";
     $sql = "SELECT * FROM tb_professor where pro_id = ".$_GET['id'];
         $pesquisar = mysqli_query($conexao, $sql);
           while ($linha = $pesquisar->fetch_assoc()) {
@@ -9,6 +11,8 @@ if (isset($_GET['id'])) {
             $senha = $linha['pro_senha'];
           }
 } else {
+    $endereco = "salvar.php";
+    $botao = "Salvar";
     $id = null;
     $nome = null;
     $senha = null;
@@ -17,15 +21,14 @@ if (isset($_GET['id'])) {
 <html>
     <head></head>
     <body>        
-        <form method="POST" action="salvar.php">
-            <input type="hidden" name="id" value="<?php echo $nome;?>">
+        <form method="POST" action="<?php echo $endereco;?>">
+            <input type="hidden" name="id" value="<?php echo $id;?>">
             <input type="text" name="usuario" placeholder="usuário" value="<?php echo $nome;?>"> <br/> <br/>
             <input type="password" name="senha" placeholder="senha" value="<?php echo $senha;?>"><br/><br/>
-            <input type="submit" value="Salvar">        
+            <input type="submit" value="<?php echo $botao;?>">        
             <input type="reset" value="Limpar">        
         </form>
-        <?php
-        
+        <?php        
         $sql = "SELECT * FROM tb_professor order by pro_id asc";
         $pesquisar = mysqli_query($conexao, $sql);
         echo "<h1> Dados </h1> <table >"
