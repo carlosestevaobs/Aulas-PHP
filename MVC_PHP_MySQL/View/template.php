@@ -18,8 +18,8 @@
             <a class="navbar-brand cols-2" href="#">Nosso CRUD</a>
 
             <div class="navbar-collapse justify-content-center">
-                <a class="nav-link" href="#">Início</a>
-                <a class="nav-link" href="#">Funcionários</a>
+                <a class="nav-link" href="?controller=pages&action=home">Início</a>
+                <a class="nav-link" href="?controller=funcionarios&action=home">Funcionários</a>
                 <div>
                 </div>
     </nav>

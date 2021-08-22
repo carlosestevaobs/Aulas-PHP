@@ -10,7 +10,7 @@ class DB {
 
             // criar a instância
             self::$instance = new PDO('mysql:host=localhost;dbname=testeprep;charset=utf8','root', '', $optionsPDO);
-            echo "conexão realizada com sucesso!";
+//            echo "conexão realizada com sucesso!";
 
         }
 
