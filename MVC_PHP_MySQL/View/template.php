@@ -15,14 +15,21 @@
     <!-- bs5-nav-a -->
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand cols-2" href="#">Nosso CRUD</a>
-
+            <a class="navbar-brand cols-2" href="#">
+                <img src="Images/otimiza.png" width="40%"></a>
             <div class="navbar-collapse justify-content-center">
-                <a class="nav-link" href="?controller=pages&action=home">Início</a>
-                <a class="nav-link" href="?controller=funcionarios&action=home">Funcionários</a>
-                <div>
-                </div>
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a class="nav-link" href="?controller=pages&action=home">Início</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="?controller=funcionarios&action=home">Funcionários</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
     <!-- bs5-grid-default -->
     <div class="container">
         <div class="row">
@@ -32,7 +39,6 @@
 
         </div>
     </div>
-
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

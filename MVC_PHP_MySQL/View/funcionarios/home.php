@@ -1,13 +1,11 @@
 <!-- bs5-card-head-foot -->
 <div class="card">
     <div class="card-header">
-        <a class="btn btn-success" href="?controller=funcionarios&action=save" role="button">Salvar funcionário</a>
-
+        <a class="btn btn-light" href="?controller=funcionarios&action=save" role="button"> <img src='images/new.png'> Novo funcionário</a>
     </div>
     <div class="card-body">
-
         <!-- bs5-table-default -->
-        <table class="table">
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>Código</th>
@@ -26,8 +24,8 @@
                     <td>
                     <!--bs5-bgroup-default-->
                     <div class='btn-group' role='group' >
-                        <a href='?controller=funcionarios&action=update&codigo=" . $funcionario->codigo . "' class='btn btn-info'>Editar</a>
-                        <a href='?controller=funcionarios&action=delete&codigo=" . $funcionario->codigo . "' class='btn btn-danger'>Remover</a>
+                        <a href='?controller=funcionarios&action=update&codigo=" . $funcionario->codigo . "' class='btn btn-info'><img src='images/pencil.png'> Editar</a>
+                        <a href='?controller=funcionarios&action=delete&codigo=" . $funcionario->codigo . "' class='btn btn-danger'><img src='images/bin.png'>Remover</a>
                     </div>                    
                     </td>
                 </tr>";
@@ -35,7 +33,5 @@
                 ?>
             </tbody>
         </table>
-
     </div>
-
 </div>
